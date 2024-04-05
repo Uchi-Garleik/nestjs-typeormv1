@@ -1,0 +1,23 @@
+services:
+  nestjs_api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "300:300"
+    environment:
+      - PORT=300
+      - NODE_ENV=development
+    volumes:
+      - ./src:/usr/src/app/src
+  mysql_db:
+    image: postgres
+    ports:
+    - '3307:3307'
+    environment:
+      - POSTGRES_PASSWORD: 12345678
+      - POSTGRES_DB: disney
+      - POSTGRES_USER: postgres
+      - PGHOST: pgdb-msr.crum4wauqhme.us-east-1.rds.amazonaws.com
+      - PGPORT: 5432
+      - PGSSL: allow
