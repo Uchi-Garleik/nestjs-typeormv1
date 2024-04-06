@@ -17,7 +17,7 @@ const client = new Client({
   user: 'postgres',
   host: 'pgdb-msr.crum4wauqhme.us-east-1.rds.amazonaws.com',
   database: 'postgres',
-  password: '12345678',
+  password: '123456788',
   port: 5432,
   ssl: true,
 });
