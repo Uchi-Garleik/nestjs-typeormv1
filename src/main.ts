@@ -24,7 +24,7 @@ async function bootstrap() {
   const PORT = process.env.PORT || 3000;
   await app.listen(PORT, ()=>{
     console.log(
-      `Server running in MODE: ${process.env.NODE_ENV} on port ${PORT}`
+      `API running in MODE: ${process.env.NODE_ENV} on port ${PORT}`
       );
   });
 }
