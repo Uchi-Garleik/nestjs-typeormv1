@@ -11,6 +11,8 @@ import { enviroments } from './enviroments';
 import config from './config';
 import { Client } from 'pg';
 import { error } from 'console';
+import { BucketController } from './bucket/bucket.controller';
+import { BucketModule } from './bucket/bucket.module';
 
 process.env.NODE_TLS_REJECT_UNAUTHORIZED='0';
 const client = new Client({
@@ -45,6 +47,7 @@ client.query('SELECT * FROM user', (err, res) => {
     UsersModule,
     ProductsModule,
     DatabaseModule,
+    BucketModule,
   ],
   controllers: [AppController],
   providers: [
