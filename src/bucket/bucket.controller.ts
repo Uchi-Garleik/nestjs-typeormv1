@@ -7,7 +7,7 @@ export class BucketController {
 
   @Get('')
   async listAllObjects() {
-    const bucketName = 'app-s3-bucket-manelserna'; // replace with your bucket name
+    const bucketName = 'app-s3-bucket-manelserna';
     const allObjects = await this.s3Service.listAllObjects(bucketName);
     return allObjects;
   }
